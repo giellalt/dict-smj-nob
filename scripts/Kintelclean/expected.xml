@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r id="nob2smj" xml:lang="nob">
+  <e>
+    <lg>
+      <l obt="N">autograf</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">autográffa (f'f) ff   </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t cg="f&apos;f:ff">autográffa</t>
+          <t cg="d">jiermedisvuohta</t>
+          <t cg="rg*">iehpejærgga</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">akrobat</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t todo="ht">akrobáhtta</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">æresbevisning</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">guddnedibme; gáfe</span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t cg="m">guddnedibme</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">læresbevisning</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t txtw_cnt="1">lguddnedibme</t>
+          <t txtw_cnt="1">gáhku</t>
+          <r>keepme</r>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">nospc</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t pos2check="V">nospacehere</t>
+          <t pos2check="N">but</t>
+          <t pos2check="N">comma</t>
+          <t pos2check="N">here</t>
+          <t pos2check="A" thing="d">and</t>
+          <t pos2check="A" thing="d">here</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">spydighet</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">delbas el. dielbesbáhko g; delbastibme m, dielbbe lb      </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t txtw_cnt="3" cg="g">delbas el. dielbesbáhko</t>
+          <t txtw_cnt="1" cg="m">delbastibme</t>
+          <t txtw_cnt="1" cg="lb">dielbbe</t>
+          <t cg="ss s">árvustallambagádus</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">spydighet2</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">delbas el. dielbesbáhko g; delbastibme m, dielbbe lb      </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t cg="g">delbas el. dielbesbáhko</t>
+          <t cg="m">delbastibme</t>
+          <t cg="lb">dielbbe</t>
+          <t cg="ss s">árvustallambagádus</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+</r>
+
