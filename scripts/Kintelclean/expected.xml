@@ -11,7 +11,30 @@
       <trans_out l_span="1" t_span="1">
         <tg>
           <t cg="f&apos;f:ff">autográffa</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">foo</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">foo</span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
           <t cg="d">jiermedisvuohta</t>
+        </tg>
+      </trans_out>
+    </mg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">foo</span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
           <t cg="rg*">iehpejærgga</t>
         </tg>
       </trans_out>
@@ -51,9 +74,9 @@
     <mg>
       <trans_out l_span="1" t_span="1">
         <tg>
+          <r>keepme</r>
           <t txtw_cnt="1">lguddnedibme</t>
           <t txtw_cnt="1">gáhku</t>
-          <r>keepme</r>
         </tg>
       </trans_out>
     </mg>
@@ -65,11 +88,13 @@
     <mg>
       <trans_out l_span="1" t_span="1">
         <tg>
-          <t pos2check="V">nospacehere</t>
-          <t pos2check="N">but</t>
-          <t pos2check="N">comma</t>
-          <t pos2check="N">here</t>
-          <t pos2check="A" thing="d">and</t>
+          <t pos2check="A" thing="d">sc</t>
+        </tg>
+      </trans_out>
+    </mg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
           <t pos2check="A" thing="d">here</t>
         </tg>
       </trans_out>
@@ -88,7 +113,6 @@
           <t txtw_cnt="3" cg="g">delbas el. dielbesbáhko</t>
           <t txtw_cnt="1" cg="m">delbastibme</t>
           <t txtw_cnt="1" cg="lb">dielbbe</t>
-          <t cg="ss s">árvustallambagádus</t>
         </tg>
       </trans_out>
     </mg>
@@ -106,7 +130,32 @@
           <t cg="g">delbas el. dielbesbáhko</t>
           <t cg="m">delbastibme</t>
           <t cg="lb">dielbbe</t>
-          <t cg="ss s">árvustallambagádus</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">spydighet3</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb      </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t cg="g">delbas el. dielbesbáhko</t>
+        </tg>
+      </trans_out>
+    </mg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb      </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t cg="m">delbastibme</t>
+          <t cg="lb">dielbbe</t>
         </tg>
       </trans_out>
     </mg>

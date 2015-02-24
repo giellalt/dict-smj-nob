@@ -11,6 +11,20 @@
       <trans_out l_span="1" t_span="1">
         <tg>
           <t>autográffa (f'f) ff</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">foo</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">foo</span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
           <t>jiermedisvuohta d; iehpejærgga rg*</t>
         </tg>
       </trans_out>
@@ -61,9 +75,7 @@
     <mg>
       <trans_out  l_span="1"  t_span="1">
         <tg>
-          <t pos2check="V">nospacehere</t>
-          <t pos2check="N">but,comma,here</t>
-          <t pos2check="A" thing="d">and;here</t>
+          <t pos2check="A" thing="d">sc;here</t>
         </tg>
       </trans_out>
     </mg>
@@ -78,8 +90,7 @@
          </trans_in>
          <trans_out l_span="1" t_span="1">
             <tg>
-              <t txtw_cnt="8">delbas el. dielbesbáhko g; delbastibme m, dielbbe lb</t>
-              <t>árvustallambagádus ss s</t>
+              <t txtw_cnt="8">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb</t>
             </tg>
          </trans_out>
       </mg>
@@ -94,8 +105,22 @@
          </trans_in>
          <trans_out l_span="1" t_span="1">
             <tg>
+              <t>delbas el. dielbesbáhko g, delbastibme m, dielbbe lb</t>
+            </tg>
+         </trans_out>
+      </mg>
+   </e>
+   <e>
+      <lg>
+         <l obt="N">spydighet3</l>
+      </lg>
+      <mg>
+         <trans_in span="1">
+            <span STYLE="">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb      </span>
+         </trans_in>
+         <trans_out l_span="1" t_span="1">
+            <tg>
               <t>delbas el. dielbesbáhko g; delbastibme m, dielbbe lb</t>
-              <t>árvustallambagádus ss s</t>
             </tg>
          </trans_out>
       </mg>
