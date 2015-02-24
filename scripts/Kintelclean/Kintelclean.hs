@@ -47,7 +47,7 @@ get_atts = proc x -> do
 -- | This is where it happens:
 splitElts :: ArrowXml a => a XmlTree XmlTree
 splitElts =
-  processTopDown ((splitMgs `when` (parentOf "mg"))
+  processTopDown ((splitMgs `when` (parentOf "mg" //> hasName "t"))
                   >>>
                   (splitTs `when` (parentOf "t")))
   where
