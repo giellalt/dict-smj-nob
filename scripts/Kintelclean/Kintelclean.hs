@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -Wall #-}
 {-# LANGUAGE Arrows, NoMonomorphismRestriction #-}
 
-module Kintelclean where
+module Main where
 
 import Text.XML.HXT.Core
 import Data.List.Split
