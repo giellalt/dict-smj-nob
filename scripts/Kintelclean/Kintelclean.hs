@@ -120,8 +120,6 @@ TODO: some have attributes like 'todo="ht"' (looks like a cnsGrd?)
       probably also cnsGrd: <t info="l'l">buolle</t>
       might want to rename to cg for consistency?
 
-TODO: <t>gállásjålmåj -ålmmå-</t> (contract nouns)
-
 The cg attribute has a lot of unstructured info:
   rg* means the strong grade is rg, but there's a vowel change as well
   f'f:ff means the strong grade is three, but spelt as ff
@@ -137,9 +135,10 @@ cnsGrdToAtts t_text =
    (trim text', cnsGrd_atts)
   where
     strongGrd = printf "\\(%s'%s\\)" cns2 cns2 :: String
-    cnsGrdPat = printf "( %s+| %s| %s{2,}[*]?)*$" cns1 strongGrd cns2 :: String
+    cnsGrdPat = printf "( %s+| %s| %s{2,}[*]?| -%s+-)*$" cns1 strongGrd cns2 letter :: String
     cns1 = "[bDdfGgjlmnŋprsVvbd]"
     cns2 = "[bDdfGgjlmnŋprsVvbdthkRVSJN]"
+    letter = "(\\w|æ|ø|å|á|Æ|Ø|Å|Á)" -- very odd bug, ŋ matched by \w but not á??
     cnsGrdAtt = mkName "cg"
     -- Turn "(f'f) ff" into "f'f:ff"
     -- (well, "f&apos;f:ff", but that's probably OK …)
