@@ -52,7 +52,7 @@ splitElts =
                   (splitTs `when` (parentOf "t")))
   where
     splitMgs = replaceChildrenNamed "mg" newMgs
-    exactlyOneT = listA (deep (hasName "t")) >>> arr length >>> isA (== 1)
+    exactlyOneT = deep (hasName "t") >. length >>> isA (== 1)
     splitTs = replaceChildrenNamed "t" newTs
 
 
