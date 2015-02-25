@@ -168,8 +168,13 @@ cnsGrdToAtts t_text =
     cnsGrdAtt = mkName "cg"
     -- Turn "(f'f) ff" into "f'f:ff"
     -- (well, "f&apos;f:ff", but that's probably OK …)
-    cgFormat cg = subRegex (mkRegex strongGrd') (trim cg) "\\1:"
-      where strongGrd' = printf "\\((%s'%s+)\\) *" cns2 cns2 :: String
+    cgFormat cg =
+      sub (strongGrd') "\\1"
+      $ sub (" +"++strongGrd') ":\\1"
+      $ sub (strongGrd'++" +") "\\1:"
+      $ trim cg
+      where strongGrd' = printf "\\((%s'%s+)\\)" cns2 cns2 :: String
+            sub pat to from = subRegex (mkRegex pat) from to
 
 
 

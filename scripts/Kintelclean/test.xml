@@ -17,6 +17,21 @@
   </e>
   <e>
     <lg>
+      <l obt="N">autograf</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">autográffa ff (f'f)   </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>autográffa ff (f'f)</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
       <l obt="N">foo</l>
     </lg>
     <mg>
