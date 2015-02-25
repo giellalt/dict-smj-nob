@@ -7,7 +7,7 @@ import Text.XML.HXT.Core
 import Data.List.Split
 import System.Environment
 import System.Exit
-import Text.Regex.Posix ((=~))
+import Text.Regex.TDFA ((=~))
 import Text.Regex (subRegex, mkRegex)
 import Text.Printf (printf)
 -- import Text.XML.HXT.XPath
@@ -138,7 +138,7 @@ cnsGrdToAtts t_text =
     cnsGrdPat = printf "( %s+| %s| %s{2,}[*]?| -%s+-)*$" cns1 strongGrd cns2 letter :: String
     cns1 = "[bDdfGgjlmnŋprsVvbd]"
     cns2 = "[bDdfGgjlmnŋprsVvbdthkRVSJN]"
-    letter = "(\\w|æ|ø|å|á|Æ|Ø|Å|Á)" -- very odd bug, ŋ matched by \w but not á??
+    letter = "[^[:digit:][:punct:][:space:][:blank:][:cntrl:]]"
     cnsGrdAtt = mkName "cg"
     -- Turn "(f'f) ff" into "f'f:ff"
     -- (well, "f&apos;f:ff", but that's probably OK …)
