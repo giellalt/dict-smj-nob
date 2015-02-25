@@ -140,6 +140,21 @@
    </e>
    <e>
      <lg>
+       <l obt="N">æressak</l>
+     </lg>
+     <mg>
+       <trans_in span="1">
+         <span STYLE="">gudneássje (s'sj) ssj   </span>
+       </trans_in>
+       <trans_out l_span="1" t_span="1">
+         <tg>
+           <t>gudneássje (s'sj) ssj</t>
+         </tg>
+       </trans_out>
+     </mg>
+   </e>
+   <e>
+     <lg>
        <l obt="N">æreskrans</l>
      </lg>
      <mg>

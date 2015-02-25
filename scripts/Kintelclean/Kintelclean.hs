@@ -134,7 +134,7 @@ cnsGrdToAtts t_text =
   in
    (trim text', cnsGrd_atts)
   where
-    strongGrd = printf "\\(%s'%s\\)" cns2 cns2 :: String
+    strongGrd = printf "\\(%s'%s+\\)" cns2 cns2 :: String
     cnsGrdPat = printf "( %s+| %s| %s{2,}[*]?| -%s+-)*$" cns1 strongGrd cns2 letter :: String
     cns1 = "[bDdfGgjlmnŋprsVvbd]"
     cns2 = "[bDdfGgjlmnŋprsVvbdthkRVSJN]"
@@ -143,7 +143,7 @@ cnsGrdToAtts t_text =
     -- Turn "(f'f) ff" into "f'f:ff"
     -- (well, "f&apos;f:ff", but that's probably OK …)
     cgFormat cg = subRegex (mkRegex strongGrd') (trim cg) "\\1:"
-      where strongGrd' = printf "\\((%s'%s)\\) *" cns2 cns2 :: String
+      where strongGrd' = printf "\\((%s'%s+)\\) *" cns2 cns2 :: String
 
 
 
