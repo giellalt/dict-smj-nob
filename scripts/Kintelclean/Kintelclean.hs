@@ -47,19 +47,38 @@ get_atts = proc x -> do
 -- | This is where it happens:
 splitElts :: ArrowXml a => a XmlTree XmlTree
 splitElts =
-  processTopDown (splitMgs `when` (parentOf "mg" >>> exactlyOneT)
-                  >>>
-                  (splitTs `when` (parentOf "t")))
+  processTopDown (
+    -- Copy pointer <t>'s to <l_ref>'s in lg:
+    pointerToLRef `when` (isTag "e" >>> deep isPointer)
+    >>>
+    -- and remove the old <t>'s:
+    none `when` isPointer
+    >>>
+    splitMgs `when` (parentOf "mg" >>> exactlyOneT)
+    >>>
+    splitTs `when` (parentOf "t")
+    )
   where
     splitMgs = replaceChildrenNamed "mg" newMgs
     exactlyOneT = deep (hasName "t") >. length >>> isA (== 1)
     splitTs = replaceChildrenNamed "t" newTs
 
 
+isPointer :: ArrowXml a => a XmlTree XmlTree
+isPointer = isTag "t" >>> hasAttrValue "type" (== "pointer")
+
+pointerToLRef :: ArrowXml a => a XmlTree XmlTree
+pointerToLRef = proc e -> do
+  t_elts <- setElemName (mkName "l_ref") <<< deep isPointer -< e
+  let new_lg = this /> hasName "lg" >>> insertChildrenAt 0 (constA t_elts)
+  returnA (replaceChildrenNamed "lg" new_lg) -<< e
+
+
+
 newMgs :: ArrowXml a => a XmlTree XmlTree
 newMgs = proc parent -> do
   old_mg <- (this /> hasName "mg") -< parent
-  (atts, trans) <- (deep (hasName "t") >>> (get_atts &&& text)) -< old_mg
+  (atts, trans) <- ((get_atts &&& text) <<< deep (hasName "t")) -< old_mg
   let tparts = splitTranslationOn ";" trans
       t_elts = map (newT atts) tparts
       new_mgs = map (newMg old_mg) t_elts
@@ -76,9 +95,9 @@ newMgs = proc parent -> do
 
 newTs :: ArrowXml a => a XmlTree XmlTree
 newTs = proc parent -> do
-  (atts, trans) <- (deep (hasName "t") >>> (get_atts &&& text)) -< parent
+  (atts, trans) <- ((get_atts &&& text) <<< deep (hasName "t")) -< parent
   let tparts = splitTranslationOn "," trans
-  let t_elts = map (newT atts) tparts
+      t_elts = map (newT atts) tparts
   foldl1 (<+>) t_elts -<< ()
 
   where
@@ -98,7 +117,13 @@ newTs = proc parent -> do
 -- typically some ellipsis happening there :-/
 splitTranslationOn :: String -> String -> [String]
 splitTranslationOn delims s =
-  map trim $ split (dropDelims . dropBlanks $ oneOf delims) s
+  if unsplittable s then
+    [s]
+  else
+    map trim $ split (dropDelims . dropBlanks $ oneOf delims) s
+  where
+    unsplittable s' =
+      s' =~ "^\\(.*\\)$"
 
 
 trim :: String -> String

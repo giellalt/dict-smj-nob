@@ -254,5 +254,16 @@
       </trans_out>
     </mg>
   </e>
+  <e>
+    <lg>
+      <l_ref type="pointer" co-text="se">sk-</l_ref>
+      <l pos="?">sjk-</l>
+    </lg>
+    <mg>
+      <trans_out t_span="0">
+        <tg/>
+      </trans_out>
+    </mg>
+  </e>
 </r>
 
