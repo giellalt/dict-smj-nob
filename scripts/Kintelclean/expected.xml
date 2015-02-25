@@ -214,5 +214,45 @@
       </trans_out>
     </mg>
   </e>
+  <e>
+    <lg>
+      <l obt="N">allereie oppdelt</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnebárda</t>
+          <t c="vn">gudnekråvnnå</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">mg er oppdelt</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnekråvnnå2</t>
+        </tg>
+      </trans_out>
+    </mg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>kake2</t>
+        </tg>
+      </trans_out>
+    </mg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnekråvnnå</t>
+          <t>kake</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
 </r>
 

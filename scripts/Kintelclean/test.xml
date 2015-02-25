@@ -80,101 +80,133 @@
       </trans_out>
     </mg>
   </e>
-   <e>
-      <lg>
-         <l obt="N">spydighet</l>
-      </lg>
-      <mg>
-         <trans_in span="1">
-            <span STYLE="">delbas el. dielbesbáhko g; delbastibme m, dielbbe lb      </span>
-         </trans_in>
-         <trans_out l_span="1" t_span="1">
-            <tg>
-              <t txtw_cnt="8">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb</t>
-            </tg>
-         </trans_out>
-      </mg>
-   </e>
-   <e>
-      <lg>
-         <l obt="N">spydighet2</l>
-      </lg>
-      <mg>
-         <trans_in span="1">
-            <span STYLE="">delbas el. dielbesbáhko g; delbastibme m, dielbbe lb      </span>
-         </trans_in>
-         <trans_out l_span="1" t_span="1">
-            <tg>
-              <t>delbas el. dielbesbáhko g, delbastibme m, dielbbe lb</t>
-            </tg>
-         </trans_out>
-      </mg>
-   </e>
-   <e>
-      <lg>
-         <l obt="N">spydighet3</l>
-      </lg>
-      <mg>
-         <trans_in span="1">
-            <span STYLE="">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb      </span>
-         </trans_in>
-         <trans_out l_span="1" t_span="1">
-            <tg>
-              <t>delbas el. dielbesbáhko g; delbastibme m, dielbbe lb</t>
-            </tg>
-         </trans_out>
-      </mg>
-   </e>
-   <e>
-      <lg>
-         <l obt="N">ætling</l>
-      </lg>
-      <mg>
-         <trans_in span="3">
-            <span STYLE="">gierraga </span>
-            <span STYLE="font-style:italic;">pl</span>
-            <span STYLE="">.; máddo tt    </span>
-         </trans_in>
-         <trans_out l_span="1" t_span="3"/>
-      </mg>
-   </e>
-   <e>
-     <lg>
-       <l obt="N">æressak</l>
-     </lg>
-     <mg>
-       <trans_in span="1">
-         <span STYLE="">gudneássje (s'sj) ssj   </span>
-       </trans_in>
-       <trans_out l_span="1" t_span="1">
-         <tg>
-           <t>gudneássje (s'sj) ssj</t>
-         </tg>
-       </trans_out>
-     </mg>
-   </e>
-   <e>
-     <lg>
-       <l obt="N">æreskrans</l>
-     </lg>
-     <mg>
-       <trans_out l_span="1" t_span="1">
-         <tg>
-           <t>gudnebárda -bŋrddag-, gudnekråvnnå vn</t>
-         </tg>
-       </trans_out>
-     </mg>
-   </e>
-   <e>
-     <lg>
-       <l obt="N">æreskrans</l>
-     </lg>
-     <mg>
-       <trans_out l_span="1" t_span="1">
-         <tg>
-           <t>gudnebárda -bárddag-, gudnekråvnnå vn</t>
-         </tg>
-       </trans_out>
-     </mg>
-   </e>
+  <e>
+    <lg>
+      <l obt="N">spydighet</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">delbas el. dielbesbáhko g; delbastibme m, dielbbe lb      </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t txtw_cnt="8">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">spydighet2</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">delbas el. dielbesbáhko g; delbastibme m, dielbbe lb      </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>delbas el. dielbesbáhko g, delbastibme m, dielbbe lb</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">spydighet3</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">delbas el. dielbesbáhko g, delbastibme m, dielbbe lb      </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>delbas el. dielbesbáhko g; delbastibme m, dielbbe lb</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">ætling</l>
+    </lg>
+    <mg>
+      <trans_in span="3">
+        <span STYLE="">gierraga </span>
+        <span STYLE="font-style:italic;">pl</span>
+        <span STYLE="">.; máddo tt    </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="3"/>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">æressak</l>
+    </lg>
+    <mg>
+      <trans_in span="1">
+        <span STYLE="">gudneássje (s'sj) ssj   </span>
+      </trans_in>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudneássje (s'sj) ssj</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">æreskrans</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnebárda -bŋrddag-, gudnekråvnnå vn</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">æreskrans</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnebárda -bárddag-, gudnekråvnnå vn</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">allereie oppdelt</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnebárda</t>
+          <t c="vn">gudnekråvnnå</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
+  <e>
+    <lg>
+      <l obt="N">mg er oppdelt</l>
+    </lg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnekråvnnå2;kake2</t>
+        </tg>
+      </trans_out>
+    </mg>
+    <mg>
+      <trans_out l_span="1" t_span="1">
+        <tg>
+          <t>gudnekråvnnå,kake</t>
+        </tg>
+      </trans_out>
+    </mg>
+  </e>
 </r>

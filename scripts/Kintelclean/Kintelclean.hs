@@ -14,21 +14,21 @@ import Text.Printf (printf)
 
 
 -- | XML helpers:
-isTag :: ArrowXml cat => String -> cat XmlTree XmlTree
+isTag :: ArrowXml a => String -> a XmlTree XmlTree
 isTag tag = isElem >>> hasName tag
 
 text :: ArrowXml a => a XmlTree String
-text = getChildren >>> getText
+text = deep getText
 
 notNamed :: ArrowXml a => String -> a XmlTree XmlTree
-notNamed n = (getName >>> isA (/= n)) `guards` this
+notNamed tag = filterA (neg (hasName tag))
 
 parentOf :: ArrowXml a => String -> a XmlTree XmlTree
 parentOf tag = isElem /> isTag tag
 
 replaceChildrenNamed :: ArrowXml a => String -> a XmlTree XmlTree -> a XmlTree XmlTree
 replaceChildrenNamed tag replacements =
-  replaceChildren ((getChildren >>> (notNamed tag))
+  replaceChildren ((getChildren >>> notNamed tag)
                    <+>
                    replacements)
 
@@ -47,21 +47,22 @@ get_atts = proc x -> do
 -- | This is where it happens:
 splitElts :: ArrowXml a => a XmlTree XmlTree
 splitElts =
-  processTopDown ((splitMgs `when` (parentOf "mg" //> hasName "t"))
+  processTopDown (splitMgs `when` (parentOf "mg" >>> exactlyOneT)
                   >>>
                   (splitTs `when` (parentOf "t")))
   where
     splitMgs = replaceChildrenNamed "mg" newMgs
+    exactlyOneT = listA (deep (hasName "t")) >>> arr length >>> isA (== 1)
     splitTs = replaceChildrenNamed "t" newTs
 
 
 newMgs :: ArrowXml a => a XmlTree XmlTree
 newMgs = proc parent -> do
   old_mg <- (this /> hasName "mg") -< parent
-  (atts, trans) <- (this //> hasName "t" >>> (get_atts &&& text)) -< old_mg
+  (atts, trans) <- (deep (hasName "t") >>> (get_atts &&& text)) -< old_mg
   let tparts = splitTranslationOn ";" trans
-  let t_elts = map (newT atts) tparts
-  let new_mgs = map (newMg old_mg) t_elts
+      t_elts = map (newT atts) tparts
+      new_mgs = map (newMg old_mg) t_elts
   foldl1 (<+>) new_mgs -<< ()
 
   where
@@ -75,7 +76,7 @@ newMgs = proc parent -> do
 
 newTs :: ArrowXml a => a XmlTree XmlTree
 newTs = proc parent -> do
-  (atts, trans) <- (this //> hasName "t" >>> (get_atts &&& text)) -< parent
+  (atts, trans) <- (deep (hasName "t") >>> (get_atts &&& text)) -< parent
   let tparts = splitTranslationOn "," trans
   let t_elts = map (newT atts) tparts
   foldl1 (<+>) t_elts -<< ()
@@ -151,7 +152,7 @@ cnsGrdToAtts t_text =
 
 
 -- | Startup boilerplate:
-process	:: String -> String -> IOSArrow b Int
+process	:: String -> String -> IOSArrow a Int
 process src dst =
   configSysVars [withValidate no, withIndent yes, withInputEncoding utf8]
   >>> readDocument [] src
