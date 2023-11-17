@@ -1,4 +1,4 @@
-!!!Prosjekt for å konvertera ordboka til Anders Kintel til brukbar xml
+# Prosjekt for å konvertera ordboka til Anders Kintel til brukbar xml
 
 I prosjektgruppa:
 * ein programmerar/datalingvist - Ciprian
@@ -21,7 +21,7 @@ Vi har eit prinsipp med ikkje-forgreinande tg (bortsett frå for ulike språk,
 dvs. tg blir brukt til å skilja omsetjingar til ulike målspråk frå kvarandre).
 Dermed blir det denne strukturen:
 
-{{{
+```
         e
      /     \
    mg      mg
@@ -29,10 +29,10 @@ Dermed blir det denne strukturen:
    tg
    / \
  t    t ...
-}}}
+```
 
 For Kintel-materialet betyr det at vi konverter slik i utgangspunktet:
 
-* {{1, 2}} = mg
-* {{;}}    = mg 
-* {{,}}    = t eller mg
+* `1, 2` = mg
+* `;`    = mg 
+* `,`    = t eller mg
