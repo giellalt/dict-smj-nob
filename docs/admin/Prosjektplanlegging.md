@@ -21,14 +21,14 @@ Vi har eit prinsipp med ikkje-forgreinande tg (bortsett frå for ulike språk,
 dvs. tg blir brukt til å skilja omsetjingar til ulike målspråk frå kvarandre).
 Dermed blir det denne strukturen:
 
-```
-        e
-     /     \
-   mg      mg
-   || 
-   tg
-   / \
- t    t ...
+```mermaid
+flowchart TD
+    e --- mg1[mg]
+    e --- mg2[mg]
+    mg1 === tg
+    tg --- t1[t]
+    tg --- t2[t]
+    tg --- tn[...]
 ```
 
 For Kintel-materialet betyr det at vi konverter slik i utgangspunktet:
