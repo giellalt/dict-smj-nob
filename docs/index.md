@@ -4,4 +4,4 @@ Please see [this page](https://giellalt.github.io/dicts/dicts.html) for more gen
 
 # Other information
 
-Add text and links as needed.
+Old [plans](admin/Prosjektplanlegging.md).
