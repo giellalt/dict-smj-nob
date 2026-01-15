@@ -1,12 +1,12 @@
 template = ""
 rev_id = 4
-template_sha = "156a8b834dacf74fc905a1ee460fe5eabb9556c6"
+template_sha = "87be02986858c4b7ae5e8613b6f951c3c209b221"
 
 [replacements]
-__LICENSE__ = "proprietary"
+__LICENSE__ = ""
 __UND2C_SRC__ = "smj"
 __UND2C_TRG__ = "nb"
-__UNDEFINED_SOURCE__ = "Lule Sámi"
+__UNDEFINED_SOURCE__ = "Lule Saami"
 __UNDEFINED_TARGET__ = "Norwegian Bokmål"
 __UND_SRC__ = "smj"
 __UND_TRG__ = "nob"
